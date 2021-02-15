@@ -5,29 +5,34 @@
 }
 
 .stories-list > li {
-  color: gray;
+  color: rgb(51, 49, 49);
   font-size: 0.8rem;
   margin: 10px 0;
+  
 }
 
 #stories-loading-msg {
   font-weight: bold;
   font-size: 150%;
   margin: 20px 30px;
+ 
+  
 }
 
 
 /* Individual stories */
 
 .story-link {
-  color: black;
+  color: rgb(189, 15, 15);
   font-size: 0.85rem;
   font-weight: normal;
   margin: 18px 0;
 }
 
 .story-link:hover {
+  font-size: 0.9rem;
   text-decoration: none;
+  
 }
 
 .story-author {

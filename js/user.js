@@ -12,19 +12,26 @@ let currentUser;
 async function login(evt) {
   console.debug("login", evt);
   evt.preventDefault();
-
-  // grab the username and password
-  const username = $("#login-username").val();
-  const password = $("#login-password").val();
-
-  // User.login retrieves user info from API and returns User instance
-  // which we'll make the globally-available, logged-in user.
-  currentUser = await User.login(username, password);
-
-  $loginForm.trigger("reset");
-
-  saveUserCredentialsInLocalStorage();
-  updateUIOnUserLogin();
+  try{
+    // grab the username and password
+    const username = $("#login-username").val();
+    const password = $("#login-password").val();
+  
+    // User.login retrieves user info from API and returns User instance
+    // which we'll make the globally-available, logged-in user.
+    currentUser = await User.login(username, password);
+  
+    $loginForm.trigger("reset");
+  
+    saveUserCredentialsInLocalStorage();
+    updateUIOnUserLogin();
+  
+  } catch{
+    
+    alert("This Account dosen't exist")
+  }
+  
+  
 }
 
 $loginForm.on("submit", login);

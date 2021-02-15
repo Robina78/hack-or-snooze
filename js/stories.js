@@ -169,7 +169,7 @@ function putFavoritesListOnPage() {
 
 async function toggleStoryFavorite(evt) {
   console.debug("toggleStoryFavorite");
-
+  console.log(evt)
   const $tgt = $(evt.target);
   const $closestLi = $tgt.closest("li");
   const storyId = $closestLi.attr("id");

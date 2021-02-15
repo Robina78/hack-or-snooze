@@ -2,10 +2,11 @@
 
 nav {
   display: flex;
-  background-color: #ff6600;
+  background-color: #800c6c;
   align-items: center;
-  padding: 5px 20px;
+  padding: 10px 20px;
   border-radius: 3px 3px 0 0;
+  color: aliceblue;
 }
 
 .navbar-brand {
@@ -20,4 +21,8 @@ nav {
 .nav-right {
   margin-left: auto;
   text-align: right;
+}
+
+.nav-link:hover {
+  font-size: 1.1rem;
 }
